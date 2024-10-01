@@ -30,6 +30,11 @@ export const Header: React.FC<HeaderProps> = ({ className, ...props }) => {
               </Link>
             </li>
             <li>
+              <Link href="/news" className="text-gray-600 hover:text-blue-600">
+                News
+              </Link>
+            </li>
+            <li>
               <Link href="/tools" className="text-gray-600 hover:text-blue-600">
                 Tools
               </Link>
