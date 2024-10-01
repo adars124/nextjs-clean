@@ -1,36 +1,187 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Project Structure
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+.
+├── README.md
+├── app
+│   ├── (auth)
+│   │   ├── layout.tsx
+│   │   ├── login
+│   │   │   └── page.tsx
+│   │   └── register
+│   │       └── page.tsx
+│   ├── (protected)
+│   │   ├── courses
+│   │   │   ├── [courseId]
+│   │   │   │   └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── insights
+│   │   │   ├── [slug]
+│   │   │   │   └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── learning
+│   │   │   ├── [courseId]
+│   │   │   │   ├── [moduleId]
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── page.tsx
+│   │   │   └── layout.tsx
+│   │   └── sutra
+│   │       ├── broker-ratings
+│   │       │   └── page.tsx
+│   │       ├── bulk-ipo
+│   │       │   └── page.tsx
+│   │       ├── layout.tsx
+│   │       ├── news-letter
+│   │       │   └── page.tsx
+│   │       ├── page.tsx
+│   │       ├── portfolio
+│   │       │   └── page.tsx
+│   │       ├── ratio-analysis
+│   │       │   └── page.tsx
+│   │       ├── screeners
+│   │       │   └── page.tsx
+│   │       ├── stock-doko
+│   │       │   └── page.tsx
+│   │       └── valuation
+│   │           └── page.tsx
+│   ├── about
+│   │   └── page.tsx
+│   ├── api
+│   │   ├── courses
+│   │   │   └── route.ts
+│   │   ├── insights
+│   │   │   └── route.ts
+│   │   └── news
+│   │       └── route.ts
+│   ├── contact
+│   │   └── page.tsx
+│   ├── error.tsx
+│   ├── layout.tsx
+│   ├── loading.tsx
+│   ├── news
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── not-found.tsx
+│   ├── page.tsx
+│   ├── stockpedia
+│   │   ├── disclaimer
+│   │   │   └── page.tsx
+│   │   ├── faq
+│   │   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── wiki
+│   │       └── page.tsx
+│   └── tools
+│       ├── bonus-adjust
+│       │   └── page.tsx
+│       ├── buy-sell
+│       │   └── page.tsx
+│       ├── compound-interest
+│       │   └── page.tsx
+│       ├── dividend
+│       │   └── page.tsx
+│       ├── inflation-calc
+│       │   └── page.tsx
+│       ├── layout.tsx
+│       ├── page.tsx
+│       ├── right-share
+│       │   └── page.tsx
+│       ├── sip
+│       │   └── page.tsx
+│       ├── swp
+│       │   └── page.tsx
+│       └── wacc
+│           └── page.tsx
+├── components
+│   ├── common
+│   │   └── TagList.tsx
+│   ├── courses
+│   │   ├── CourseCard.tsx
+│   │   └── CourseDetails.tsx
+│   ├── forms
+│   │   ├── AuthForm.tsx
+│   │   └── CourseEnrollment.tsx
+│   ├── insights
+│   │   ├── AuthorInfo.tsx
+│   │   ├── InsightCard.tsx
+│   │   └── InsightList.tsx
+│   ├── layouts
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── Layout.tsx
+│   │   └── Sidebar.tsx
+│   ├── news
+│   │   ├── NewsCard.tsx
+│   │   └── NewsList.tsx
+│   ├── stockpedia
+│   │   └── StockpediaCard.tsx
+│   ├── tools
+│   │   └── ToolCard.tsx
+│   └── ui
+│       ├── Button.tsx
+│       ├── Card.tsx
+│       ├── CustomImage.tsx
+│       ├── Input.tsx
+│       ├── Modal.tsx
+│       ├── Spinner.tsx
+│       └── Table.tsx
+├── config
+│   ├── navigation.ts
+│   └── seo.ts
+├── hooks
+│   ├── useAuth.ts
+│   ├── useCourses.ts
+│   ├── useInsights.ts
+│   ├── useNews.ts
+│   ├── useTools.ts
+│   └── useUser.ts
+├── lib
+│   ├── api.ts
+│   ├── constants.ts
+│   ├── navs
+│   │   ├── stockpedia.tsx
+│   │   └── tools.tsx
+│   └── utils.ts
+├── next.config.mjs
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── fonts
+│   │   ├── GeistMonoVF.woff
+│   │   └── GeistVF.woff
+│   └── images
+├── styles
+│   ├── globals.css
+│   └── variables.css
+├── tailwind.config.ts
+├── tsconfig.json
+└── types
+    ├── api.ts
+    ├── course.ts
+    ├── insight.ts
+    ├── news.ts
+    ├── ui.ts
+    └── user.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- NextJS
+- Tailwind CSS
+- Lucide React
+- Prettier
+- Eslint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation Procedure
 
-## Learn More
+1. Clone the Repository: `git clone git@github.com:adars124/nextjs-clean.git`
 
-To learn more about Next.js, take a look at the following resources:
+2. Change Directory: `cd nextjs-clean`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install Dependencies: `npm i` or `npm install`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Start the app: `npm run dev`
