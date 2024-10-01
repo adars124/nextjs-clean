@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 
 type ToolCardProps = {
   tool: {
-    id: string;
+    href: string;
     name: string;
     description: string;
     icon: React.ReactNode;
@@ -21,7 +21,7 @@ export const ToolCard: React.FC<ToolCardProps> = ({ tool }) => {
           <h2 className="text-xl font-semibold">{tool.name}</h2>
         </div>
         <p className="text-gray-600 mb-4 flex-grow">{tool.description}</p>
-        <Link href={`/tools/${tool.id}`} className="mt-auto">
+        <Link href={`/tools/${tool.href}`} className="mt-auto">
           <Button variant="primary" size="sm" className="w-full">
             Use Tool
           </Button>
