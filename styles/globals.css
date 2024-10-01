@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Geist Mono';
+  src:
+    url('/fonts/GeistMonoVF.woff') format('woff'),
+    /* Modern browsers */ url('/fonts/GeistMonoVF.woff') format('woff'); /* Older browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Geist Mono', monospace; /* Apply the font globally */
+}
