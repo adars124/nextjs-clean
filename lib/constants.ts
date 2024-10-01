@@ -65,3 +65,39 @@ export const dummyCourses = [
   },
   // Add more dummy courses as needed
 ];
+
+// ... (previous constants)
+
+export const dummyNews = [
+  {
+    id: '1',
+    title: 'Stock Market Reaches New Heights Amid Economic Recovery',
+    source: 'Financial Times',
+    date: '2023-06-01',
+    image: 'https://picsum.photos/800/400?random=1',
+    snippet:
+      'The stock market has reached record highs as the global economy shows strong signs of recovery post-pandemic.',
+    url: 'https://www.ft.com/content/example-article',
+  },
+  {
+    id: '2',
+    title: 'Tech Giants Face New Antitrust Regulations',
+    source: 'Wall Street Journal',
+    date: '2023-05-30',
+    image: 'https://picsum.photos/800/400?random=2',
+    snippet:
+      'Major technology companies are bracing for new antitrust regulations that could reshape the industry landscape.',
+    url: 'https://www.wsj.com/articles/example-article',
+  },
+  {
+    id: '3',
+    title: 'Cryptocurrency Market Volatility Continues',
+    source: 'Bloomberg',
+    date: '2023-05-29',
+    image: 'https://picsum.photos/800/400?random=3',
+    snippet:
+      'The cryptocurrency market remains highly volatile as investors react to regulatory news and market sentiment.',
+    url: 'https://www.bloomberg.com/news/articles/example-article',
+  },
+  // Add more dummy news items as needed
+];
