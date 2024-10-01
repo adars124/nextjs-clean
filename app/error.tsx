@@ -28,7 +28,7 @@ export default function Error({
             occurred.
           </p>
           <div className="space-y-4">
-            <Button onClick={reset} variant="primary" className="w-full">
+            <Button onClick={reset} variant="primary" className="w-full mb-4">
               Try again
             </Button>
             <Button href="/" variant="outline" className="w-full">
