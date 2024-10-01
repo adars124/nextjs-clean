@@ -39,6 +39,14 @@ export const Header: React.FC<HeaderProps> = ({ className, ...props }) => {
                 Tools
               </Link>
             </li>
+            <li>
+              <Link
+                href="/stockpedia"
+                className="text-gray-600 hover:text-blue-600"
+              >
+                Stockpedia
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
