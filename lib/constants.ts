@@ -66,8 +66,6 @@ export const dummyCourses = [
   // Add more dummy courses as needed
 ];
 
-// ... (previous constants)
-
 export const dummyNews = [
   {
     id: '1',
