@@ -11,7 +11,8 @@ export default function LoginPage() {
     // Add login logic here
     console.log('Login form submitted');
   };
-
+  
+//here is the comment
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="max-w-md w-full">
@@ -20,7 +21,7 @@ export default function LoginPage() {
             Log in to your account
           </h2>
           <div className="mt-8">
-            <AuthForm isLogin={true} onSubmit={handleSubmit} />
+            <AuthForm isLogin={true} onSubmit={handleSubmit} /> 
           </div>
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
